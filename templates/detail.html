@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content_ %}
+<div class="container py-3">
+    <div class="row">
+        <div class="col">
+            <a href="/"><- kembali</a>
+            <br>
+            <img src="{{ d["foto"] }}" alt="">
+            <h2>{{d["nama"]}}</h2>
+            {% if d['nilai']>60 :%}
+            <p class="text-success">Lulus</p>
+            {% else :%}
+            <p class="text-danger">Belum Lulus</p>
+            {% endif %}
+
+            <h6>No HP: {{d["no_hp"]}}</h6>
+            <h6>Email: {{d["email"]}}</h6>
+            <h6>Alamat: {{d["alamat"]}}</h6>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

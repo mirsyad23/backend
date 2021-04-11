@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content_ %}
+<div class="container py-3">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-4 col-sm-12 col-xs-12 mb-5">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <div class="card-title mb-0">Login</div>
+                </div>
+                <div class="card-body">
+                <form action="/proseslogin" method="post">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control form-control-sm" name="username" id="username" value="admin">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control form-control-sm" name="password" id="password" value="admin">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary float-right rounded-pill">Login</button>
+                </form>
+                </div>
+                <div class="card-footer">
+                <a href="/regis"><button class="btn btn-block btn-primary rounded-pill">Registration</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

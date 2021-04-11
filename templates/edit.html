@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content_ %}
+<div class="container py-3">
+    <a href="/"><- kembali</a>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-6">
+            <div class="card card-primary">
+                <div class="card-body">
+                <img class="rounded mx-auto d-block" src="{{ d["foto"] }}" alt="" width="50%">
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <div class="card-title">Edit</div>
+                </div>
+                <div class="card-body">
+                <form action="/update/{{d["id"]}}" method="post">
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <input type="text" class="form-control" name="nama" id="nama" value="{{d["nama"]}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" value="{{d["email"]}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="nilai">Nilai</label>
+                        <input type="number" class="form-control" name="nilai" id="nilai" value="{{d["nilai"]}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="foto">Foto</label>
+                        <input type="text" class="form-control" name="foto" id="foto" value="{{d["foto"]}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="alamat">Alamat</label>
+                        <input type="text" class="form-control" name="alamat" id="alamat" value="{{d["alamat"]}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="no_hp">HP</label>
+                        <input type="text" class="form-control" name="no_hp" id="no_hp" value="{{d["no_hp"]}}">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary float-right">Save</button>
+                </form>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
